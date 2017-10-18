@@ -1,7 +1,10 @@
 package com.xylink.model;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
 import java.io.Serializable;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class SdkMeeting implements Serializable {
 
 	private static final long serialVersionUID = -4116669862379638007L;

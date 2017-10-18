@@ -137,7 +137,7 @@ public class LiveVideoApi {
     public static void main(String[] args) throws Exception {
         Status status = new Status();
         status.setStatus("start");
-        new LiveVideoApi().controlLive("662782757532540cd3c2908206cb3d9398d68980", "8fd2c02d20b6b91e541f1227810f6351466a1022a8abfae3255bfd104f808a74",
+        new LiveVideoApi().controlLive("f3c422a7c36eac6c924ed2a50eb4f49f82b128de", "a727338bb95fb608dde30774a96ae712c4a71ab3a4d6b499282048852bfe5a43",
                 "913683308827", "", "ff8080815d914ccd015da12c05d0628f", status);
     }
 }

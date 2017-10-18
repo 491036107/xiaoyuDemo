@@ -1,5 +1,8 @@
 package com.xylink.model;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Video {
     private String url;
     private long startTimestamp;

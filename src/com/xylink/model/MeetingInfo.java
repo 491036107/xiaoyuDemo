@@ -1,37 +1,18 @@
 package com.xylink.model;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
 /**
  * Created by maolizhi on 12/19/2016.
  */
-import java.io.Serializable;
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class MeetingInfo extends BaseMeetingInfo {
 
-public class MeetingInfo implements Serializable {
-    private String meetingRoomState;
-    private int autoMute;
     private int smartMutePerson;
     private boolean autoRecord;
 
-    public MeetingInfo() {
-    }
-
-    public String getMeetingRoomState() {
-        return this.meetingRoomState;
-    }
-
-    public void setMeetingRoomState(String meetingRoomState) {
-        this.meetingRoomState = meetingRoomState;
-    }
-
-    public int getAutoMute() {
-        return this.autoMute;
-    }
-
-    public void setAutoMute(int autoMute) {
-        this.autoMute = autoMute;
-    }
-
     public int getSmartMutePerson() {
-        return this.smartMutePerson;
+        return smartMutePerson;
     }
 
     public void setSmartMutePerson(int smartMutePerson) {
@@ -39,14 +20,22 @@ public class MeetingInfo implements Serializable {
     }
 
     public boolean isAutoRecord() {
-        return this.autoRecord;
+        return autoRecord;
     }
 
     public void setAutoRecord(boolean autoRecord) {
         this.autoRecord = autoRecord;
     }
 
+    @Override
     public String toString() {
-        return "MeetingInfo{meetingRoomState=\'" + this.meetingRoomState + '\'' + ", autoMute=" + this.autoMute + ", smartMutePerson=" + this.smartMutePerson + ", autoRecord=" + this.autoRecord + '}';
+        return "MeetingInfo{" +
+                "meetingRoomState='" + getMeetingRoomState() + '\'' +
+                ", autoMute=" + getAutoMute() +
+                ", smartMutePerson=" + smartMutePerson +
+                ", autoRecord=" + autoRecord +
+                ", meettingRoomName=" + getMeettingRoomName() +
+                ", expireTime=" + getExpireTime() +
+                '}';
     }
 }

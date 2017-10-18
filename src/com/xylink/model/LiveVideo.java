@@ -4,7 +4,9 @@ package com.xylink.model;
  * Created by maolizhi on 12/15/2016.
  */
 import org.apache.commons.lang3.StringUtils;
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class LiveVideo {
     public static final int TITLE_WIDTH = 32;
     public static final int DETAIL_WIDTH = 128;

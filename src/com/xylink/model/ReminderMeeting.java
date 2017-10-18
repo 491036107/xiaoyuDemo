@@ -1,5 +1,7 @@
 package com.xylink.model;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -7,7 +9,7 @@ import java.util.Set;
 /**
  * Created by maolizhi on 12/16/2016.
  */
-
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ReminderMeeting implements Serializable {
     private String id;
     private long startTime;

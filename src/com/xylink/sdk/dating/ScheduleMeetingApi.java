@@ -66,6 +66,20 @@ public class ScheduleMeetingApi {
     }
 
     /**
+     * 按照会议ID获取会议提醒
+     * @param enterpriseId
+     * @param token
+     * @param meetingId
+     * @return
+     * @throws IOException
+     */
+    public Result<ReminderMeeting> getMeeting(String enterpriseId, String token,String meetingId) throws IOException{
+        String surl = getPrefixUrl() + "/" + meetingId + "?enterpriseId=" + enterpriseId;
+        String signature = signatureSample.computeSignature("","GET",token,surl);
+        surl += "&signature=" + signature;
+        return HttpUtil.getResponse(surl,"GET", null,ReminderMeeting.class);
+    }
+    /**
      * get all meetings who's end time is bigger than  the parmater "endTime",
      * if success,the date type of Result is "ReminderMeeting[]",the date value is meeting id;if not ,
      * the date type of Result is "RestMessage"

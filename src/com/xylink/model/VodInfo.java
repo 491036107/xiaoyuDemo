@@ -1,10 +1,13 @@
 package com.xylink.model;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
 import java.io.Serializable;
 
 /**
  * Created by maolizhi on 12/18/2016.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class VodInfo implements Serializable {
     private long vodId;
     private String displayName;

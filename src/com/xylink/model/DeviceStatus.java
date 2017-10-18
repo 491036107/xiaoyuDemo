@@ -3,8 +3,11 @@ package com.xylink.model;
 /**
  * Created by maolizhi on 12/12/2016.
  */
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
 import java.io.Serializable;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class DeviceStatus implements Serializable {
     private String name;
     private int muteStatus;

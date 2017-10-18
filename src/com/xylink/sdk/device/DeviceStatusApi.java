@@ -28,7 +28,7 @@ public class DeviceStatusApi {
      * @return
      * @throws IOException
      */
-    public Result<DeviceInfo[]> getDeviceInfo(String enterpriseId,String token,String number) throws IOException{
+    public Result<DeviceInfo> getDeviceInfo(String enterpriseId,String token,String number) throws IOException{
 
         String surl = getPrefixUrl() + "/" + number + "?enterpriseId=" + enterpriseId;
         String signature = signatureSample.computeSignature("","GET",token,surl);

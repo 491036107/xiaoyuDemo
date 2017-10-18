@@ -6,7 +6,7 @@ import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 /**
  * Created by maolizhi on 3/14/17.
  */
-@JsonIgnoreProperties({ "nameCode" })
+@JsonIgnoreProperties(value = { "nameCode" }, ignoreUnknown = true)
 public class NemoDto implements Comparable<NemoDto> {
     private String name;
     @SuppressWarnings("unused")

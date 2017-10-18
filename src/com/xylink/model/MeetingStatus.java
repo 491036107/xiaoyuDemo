@@ -1,13 +1,17 @@
 package com.xylink.model;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
 import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by mlz on 12/12/2016.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class MeetingStatus implements Serializable {
     private String meetingRoomNumber;
+    private String meetingName;
     private int mode = 0;
     private Device mainVenue;
     private Device mainImage;
@@ -60,5 +64,13 @@ public class MeetingStatus implements Serializable {
 
     public void setMainImage(Device mainImage) {
         this.mainImage = mainImage;
+    }
+
+    public String getMeetingName() {
+        return meetingName;
+    }
+
+    public void setMeetingName(String meetingName) {
+        this.meetingName = meetingName;
     }
 }

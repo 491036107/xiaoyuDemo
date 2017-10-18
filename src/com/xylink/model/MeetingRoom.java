@@ -3,8 +3,14 @@ package com.xylink.model;
 /**
  * Created by maolizhi on 12/13/2016.
  */
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
 import java.io.Serializable;
 
+/**
+ *
+ */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class MeetingRoom implements Serializable {
     private String meetingRoomNumber;
     private String nemoNumber;

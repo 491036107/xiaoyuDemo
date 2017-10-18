@@ -1,10 +1,13 @@
 package com.xylink.model;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
 import java.io.Serializable;
 
 /**
  * Created by maolizhi on 4/7/17.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class RecordingResponse  implements Serializable {
     private RecordingStatusResponse recordingStatusResponse;
     private String downLoadRestApi;

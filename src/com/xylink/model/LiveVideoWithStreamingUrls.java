@@ -1,8 +1,11 @@
 package com.xylink.model;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
 /**
  * Created by maolizhi on 12/15/2016.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class LiveVideoWithStreamingUrls extends LiveVideo{
     private String flv;
     private String hls;

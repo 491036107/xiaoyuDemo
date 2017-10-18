@@ -1,8 +1,11 @@
 package com.xylink.model;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
 /**
  * Created by maolizhi on 3/14/2017.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class LiveVideoForConference {
     String liveId;
     String enterpriseId;
